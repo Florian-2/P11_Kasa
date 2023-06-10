@@ -1,0 +1,18 @@
+.footer {
+    padding-block: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: black;
+}
+
+.logo {
+    width: 75px;
+}
+
+.copyright {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    color: white;
+}

@@ -1,0 +1,21 @@
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+}
+
+main {
+    flex-grow: 1;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+nav a.active {
+    text-decoration: underline;
+}
