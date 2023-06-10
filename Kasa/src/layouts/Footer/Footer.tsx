@@ -1,4 +1,4 @@
-import logo from '../../../assets/logo_kasa_white.svg';
+import logo from '../../assets/logo_kasa_white.svg';
 import style from './footer.module.css';
 
 

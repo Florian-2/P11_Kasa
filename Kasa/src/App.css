@@ -12,8 +12,9 @@ main {
 }
 
 main {
+    margin-block: 4.5rem;
     flex-grow: 1;
-    padding: clamp(1rem, 3vw, 2rem);
+    padding-inline: clamp(1rem, 3vw, 2rem);
 }
 
 nav a.active {

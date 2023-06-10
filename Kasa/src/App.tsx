@@ -1,17 +1,21 @@
 import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { Suspense } from 'react';
 
-import { Header } from './components/layouts/Header/Header'
-import { Footer } from './components/layouts/Footer/Footer';
-import './App.css'
+import { Header } from './layouts/Header/Header'
+import { Footer } from './layouts/Footer/Footer';
+import './App.css';
 
 
-export function App() {
+function App() {
+
     return (
         <>
             <Header />
 
             <main>
-                <Outlet />
+                <Suspense>
+                    <Outlet />
+                </Suspense>
             </main>
 
             <Footer />
@@ -20,3 +24,5 @@ export function App() {
         </>
     );
 }
+
+export default App;

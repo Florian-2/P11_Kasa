@@ -1,15 +1,25 @@
-import { useEffect } from "react";
-import { useNavigation } from "react-router-dom";
+import { Suspense } from "react";
+import { Await, useLoaderData } from "react-router-dom";
+import { Housing } from "../../interfaces";
+import { Banner } from "./components/Banner/Banner";
+import { CardListHousing } from "./components/Cards/CardListHousing";
+import { Loading } from "../../components/Loading/Loading";
 
-export function Home() {
-    const navigation = useNavigation();
+import style from './home.module.css';
 
-    useEffect(() => console.log(navigation), [navigation])
+
+export default function Home() {
+    const { housing } = useLoaderData() as { housing: Housing[]; }
 
     return (
-        <>
-            <h2>Home</h2>
-            {navigation.state === "loading" ? <p>Chargement</p> : null}
-        </>
-    )
+        <div className={style.container}>
+            <Banner/>
+
+            <Suspense fallback={<Loading/>}>
+                <Await resolve={housing}>
+                    {(data: Housing[]) => <CardListHousing listHousing={data} />}
+                </Await>
+            </Suspense>
+        </div>
+    );
 }
