@@ -26,11 +26,11 @@ export const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <About/>
+            },
+            {
+                path: '*',
+                element: <NotFoundPage/>
             }
         ]
-    },
-    {
-        path: '*',
-        element: <NotFoundPage/>
     }
 ]);

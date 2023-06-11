@@ -13,5 +13,5 @@ export default function Housing() {
                 {(data: InterfaceHousing) => <h2>{data.title} - {data.id}</h2>}
             </Await>
         </Suspense>
-    )
+    );
 }

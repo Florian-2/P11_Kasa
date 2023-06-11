@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { Await, useLoaderData } from "react-router-dom";
 import { Housing } from "../../interfaces";
 import { Banner } from "./components/Banner/Banner";
@@ -10,6 +10,8 @@ import style from './home.module.css';
 
 export default function Home() {
     const { housing } = useLoaderData() as { housing: Housing[]; }
+
+    useEffect(() => console.log('render'))
 
     return (
         <div className={style.container}>
