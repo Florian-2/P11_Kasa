@@ -1,5 +1,6 @@
 .banner {
-    height: 180px;
+    min-height: 180px;
+    max-height: 180px;
     border-radius: calc(var(--radius) + 8px);
     overflow: hidden;
     position: relative;
@@ -31,6 +32,7 @@
 
 @media screen and (max-width: 600px) {
     .banner {
-        height: 100px;
+        min-height: 100px;
+        max-height: 100px;
     }
 }

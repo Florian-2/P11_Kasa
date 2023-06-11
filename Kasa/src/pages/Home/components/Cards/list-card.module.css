@@ -1,4 +1,5 @@
 .container_card {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 3.5rem;
