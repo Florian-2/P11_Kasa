@@ -1,0 +1,48 @@
+.item {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-block: 2rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    max-height: 40px;
+    transition: max-height 500ms ease-out;
+}
+
+.item.active {
+    max-height: 1000px;
+    box-flex-group: red;
+}
+
+.header {
+    padding-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--radius) var(--radius) 0 0;
+    background-color: var(--color-primary);
+}
+.title {
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.icon {
+    width: 4rem;
+}
+
+.content {
+    background-color: var(--color-gray);
+}
+
+.description {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}

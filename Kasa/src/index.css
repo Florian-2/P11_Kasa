@@ -8,7 +8,9 @@
 
 :root {
     --color-primary: #FF6060;
+    --color-gray: #F6F6F6;
     --radius: 1rem;
+    --transition: 250ms;
 
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;

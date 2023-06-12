@@ -4,7 +4,7 @@
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 3.5rem;
     padding: 3.5rem;
-    background-color: #F6F6F6;
+    background-color: var(--color-gray);
     border-radius: calc(var(--radius) + 8px);
 }
 

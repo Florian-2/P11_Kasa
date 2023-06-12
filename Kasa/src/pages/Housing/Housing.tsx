@@ -10,7 +10,7 @@ export default function Housing() {
     return (
         <Suspense fallback={<Loading/>}>
             <Await resolve={housing}>
-                {(data: InterfaceHousing) => <h2>{data.title} - {data.id}</h2>}
+                {(data: InterfaceHousing) => <p>{JSON.stringify(data)}</p>}
             </Await>
         </Suspense>
     );
