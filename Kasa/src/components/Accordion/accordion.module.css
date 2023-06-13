@@ -1,19 +1,16 @@
 .item {
     max-width: 1000px;
-    margin: 0 auto;
-    margin-block: 2rem;
     border-radius: var(--radius);
     overflow: hidden;
-    max-height: 40px;
-    transition: max-height 500ms ease-out;
+    max-height: 50px;
+    /* transition: max-height 1s ease-out; */
 }
-
 .item.active {
     max-height: 1000px;
-    box-flex-group: red;
 }
 
 .header {
+    height: 50px;
     padding-left: 1rem;
     display: flex;
     justify-content: space-between;
@@ -23,10 +20,13 @@
 }
 .title {
     font-size: 2rem;
+    font-size: clamp(1.6rem, 3vw, 2rem);
     color: white;
     font-weight: 500;
 }
 .btn {
+    height: 100%;
+    padding-left: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,8 +41,9 @@
 .content {
     background-color: var(--color-gray);
 }
-
 .description {
-    font-size: 1.5rem;
-    padding: 1.5rem;
+    padding: 1.7rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.4;
+    color: var(--color-primary);
 }
