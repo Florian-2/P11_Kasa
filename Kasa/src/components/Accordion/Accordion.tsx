@@ -2,19 +2,23 @@ import { useState } from "react";
 import { Accordion as TypeAccordion} from "../../interfaces";
 
 import style from './accordion.module.css';
+import { IconAngle } from "../Icons/IconAngle";
 
 
 export function Accordion({ data }: { data: TypeAccordion }) {
     const [isActive, setIsActive] = useState<boolean>(false);
+    const [classItem, setClassItem] = useState<string>(style.item);
 
     const handleClickItem = () => {
-        console.log('click');
-        setIsActive(!isActive);
-    }
+        const active = !isActive;
+        setIsActive(active);
 
-    let classItem = style.item;
-    if (isActive) {
-        classItem += ` ${style.active}`;
+        if (active) {
+            setClassItem(`${style.item} ${style.active}`);
+        }
+        else {
+            setClassItem(style.item);
+        }
     }
 
     return (
@@ -23,7 +27,7 @@ export function Accordion({ data }: { data: TypeAccordion }) {
                 <p className={style.title}>{data.title}</p>
 
                 <button onClick={handleClickItem} className={style.btn}>
-                    <img src="/src/assets/angle-down.svg" alt="chevron vers le bas" className={style.icon}/>
+                    <IconAngle className={style.icon}/>
                 </button>
             </div>
 

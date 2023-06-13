@@ -1,0 +1,26 @@
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.200);
+}
+
+.btn svg {
+    width: 10rem;
+}
+.icon_left {
+    transform: rotate(-90deg);
+}
+.icon_right {
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width: 500px) {
+    .btn svg {
+        width: 7rem;
+    }
+}

@@ -1,12 +1,15 @@
 .item {
     max-width: 1000px;
+    width: 100%;
     border-radius: var(--radius);
     overflow: hidden;
     max-height: 50px;
-    /* transition: max-height 1s ease-out; */
 }
 .item.active {
     max-height: 1000px;
+}
+.item.active .btn .icon{
+    transform: rotate(0);
 }
 
 .header {
@@ -36,6 +39,7 @@
 }
 .icon {
     width: 4rem;
+    transform: rotate(180deg);
 }
 
 .content {

@@ -1,4 +1,4 @@
-import { aboutData } from '../../components/data/about';
+import { aboutData } from '../../data/about';
 import { Banner } from '../../components/Banner/Banner';
 import bannerImg from '../../assets/images/montagne.png';
 import { Accordion } from '../../components/Accordion/Accordion';
