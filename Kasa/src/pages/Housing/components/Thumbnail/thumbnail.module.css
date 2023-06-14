@@ -1,0 +1,23 @@
+.container_thumbnail {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.thumbnail {
+    width: 70px;
+    border-radius: 50%;
+}
+
+.container_name {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 0.5rem;
+}
+.name {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    color: var(--color-primary);
+    font-weight: 500;
+}

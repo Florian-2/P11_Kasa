@@ -32,8 +32,13 @@ export function Accordion({ data }: { data: TypeAccordion }) {
             </div>
 
             <div className={style.content}>
-                {/* Vérifier si "description" est un tableau ou une simple string */}
-                <p className={style.description}>{data.description}</p>
+                {
+                    Array.isArray(data.description) ? (
+                        <ul className={style.list}>
+                            { data.description.map((item, i) => <li key={i} className={style.item}>{item}</li>) }
+                        </ul>
+                    ) : <p className={style.description}>{data.description}</p>
+                }
             </div>
         </div>
     );

@@ -1,0 +1,15 @@
+.tag {
+    width: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: var(--radius);
+}
+
+.content {
+    padding: 0.8rem 3rem;
+    white-space: nowrap;
+    color: white;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+}

@@ -17,6 +17,7 @@ main {
     padding-inline: clamp(1rem, 3vw, 2rem);
 }
 
-nav a.active {
-    text-decoration: underline;
+nav a.active::before {
+    opacity: 1;
+    width: 100%;
 }

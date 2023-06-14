@@ -1,0 +1,14 @@
+.stars {
+    display: flex;
+}
+
+.grey path {
+    fill: #E3E3E3;
+}
+.grey {
+    fill: #E3E3E3;
+}
+
+.star {
+    width: 30px;
+}

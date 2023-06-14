@@ -30,8 +30,8 @@ export function Slider({ title, images }: { title: string, images: string[] }) {
         <div className={style.slider}>
             {
                 images.map((img, i) => (
-                    <div className={[style.slide, slideIndex === (i + 1) ? style.active_anim : ""].join(' ')}>
-                        <img key={i} src={img} alt={title} className={style.img} />
+                    <div key={i} className={[style.slide, slideIndex === (i + 1) ? style.active_anim : ""].join(' ')}>
+                        <img  src={img} alt={title} className={style.img} />
                     </div>
                 ))
             }

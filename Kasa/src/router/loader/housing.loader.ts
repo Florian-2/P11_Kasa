@@ -10,6 +10,7 @@ export async function getAllHousingLoader() {
     }
 
     return defer({
+        // housing: res.json()
         housing: new Promise<Housing[]>((resolve) => setTimeout(() => resolve(res.json()), 1000))
     })
 }
@@ -29,6 +30,7 @@ export async function getOneHousingByIdLoader({ params }: LoaderFunctionArgs) {
     }
 
     return defer({
+        // housing: res.json()
         housing: new Promise<Housing>((resolve) => setTimeout(() => resolve(housing), 1000))
     })
 }
