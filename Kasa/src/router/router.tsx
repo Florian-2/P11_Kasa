@@ -4,6 +4,7 @@ import { lazy } from 'react';
 import { getAllHousingLoader, getOneHousingByIdLoader } from './loader/housing.loader';
 
 import App from '../App';
+import { ErrorPage } from '../pages/Error/ErrorPage';
 const Home = lazy(() => import('../pages/Home/Home'));
 const Housing = lazy(() => import('../pages/Housing/Housing'));
 const About = lazy(() => import('../pages/About/About'));
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
     {
         path: '/',
         element: <App/>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,

@@ -1,0 +1,21 @@
+.container_error {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    color: var(--color-primary);
+}
+
+.message {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    text-align: center;
+}
+
+.link {
+    margin-top: 10rem;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    color: inherit;
+    text-decoration: underline;
+}
