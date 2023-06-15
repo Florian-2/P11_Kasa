@@ -1,23 +1,22 @@
-.item {
+.accordion {
     max-width: 1000px;
     width: 100%;
     border-radius: 15px;
-    overflow: hidden;
-    max-height: 60px;
-    /* transition: max-height 200ms; */
-}
-.item.active {
-    max-height: 400px;
 }
 
 .header {
     height: 60px;
+    width: 100%;
     padding-left: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: var(--radius) var(--radius) 0 0;
+    border-radius: var(--radius);
     background-color: var(--color-primary);
+    transition: border-radius var(--transition);
+}
+.accordion.active .header {
+    border-radius: var(--radius) var(--radius) 0 0;
 }
 .title {
     font-size: 2rem;
@@ -45,20 +44,29 @@
 }
 
 .content {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
     background-color: var(--color-gray);
-}
-.list, 
-.description {
     font-size: clamp(1.5rem, 3vw, 2rem);
     color: var(--color-primary);
+    border-radius: 0 0 var(--radius) var(--radius);
+
+    transition: height var(--transition), opacity var(--transition);
 }
 .description {
     padding: 1.7rem;
     line-height: 1.4;
 }
 .list {
+    list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     padding: 2rem;
+}
+
+.accordion.active .content {
+    overflow: hidden;
+    opacity: 1;
 }
