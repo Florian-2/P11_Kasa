@@ -7,22 +7,14 @@ import { IconAngle } from "../Icons/IconAngle";
 
 export function Accordion({ data }: { data: TypeAccordion }) {
     const [isActive, setIsActive] = useState<boolean>(false);
-    const [classItem, setClassItem] = useState<string>(style.item);
 
     const handleClickItem = () => {
         const active = !isActive;
         setIsActive(active);
-
-        if (active) {
-            setClassItem(`${style.item} ${style.active}`);
-        }
-        else {
-            setClassItem(style.item);
-        }
     }
 
     return (
-        <div className={classItem}>
+        <div className={[style.item, isActive ? style.active : null].join(' ')}>
             <div className={style.header}>
                 <p className={style.title}>{data.title}</p>
 
