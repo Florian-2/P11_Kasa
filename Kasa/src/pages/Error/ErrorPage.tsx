@@ -20,7 +20,7 @@ export function ErrorPage() {
     return (
         <div className={style.container_error}>
             <h2 className={style.message}>{ errorMessage }</h2>
-            <NavLink to="/" className={style.link}>Retourner sur la page d’accueil</NavLink>
+            <NavLink to="/" replace className={style.link}>Retourner sur la page d’accueil</NavLink>
         </div>
     );
 }
