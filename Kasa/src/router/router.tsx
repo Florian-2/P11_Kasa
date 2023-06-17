@@ -4,7 +4,7 @@ import { lazy } from 'react';
 import { getAllHousingLoader, getOneHousingByIdLoader } from './loader/housing.loader';
 
 import App from '../App';
-import { ErrorPage } from '../pages/Error/ErrorPage';
+const ErrorPage = lazy(() => import('../pages/Error/ErrorPage'));
 const Home = lazy(() => import('../pages/Home/Home'));
 const Housing = lazy(() => import('../pages/Housing/Housing'));
 const About = lazy(() => import('../pages/About/About'));

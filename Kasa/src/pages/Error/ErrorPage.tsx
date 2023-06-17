@@ -3,7 +3,7 @@ import { useRouteError, isRouteErrorResponse, NavLink } from "react-router-dom"
 import style from './error-page.module.css';
 
 
-export function ErrorPage() {
+export default function ErrorPage() {
     const error = useRouteError();
     let errorMessage = "";
 
