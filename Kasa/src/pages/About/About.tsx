@@ -11,9 +11,9 @@ export default function About() {
         <>
             <Banner img={bannerImg} />
 
-            <div className={style.accordion}>
+            <section className={style.accordion}>
                 {aboutData.map((item) => <Accordion key={item.id} data={item}/>)}
-            </div>
+            </section>
         </>
     );
 }

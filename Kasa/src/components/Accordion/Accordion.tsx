@@ -29,11 +29,11 @@ export function Accordion({ data }: { data: TypeAccordion }) {
     const handleClickToggle = () => setIsActive(!isActive);
 
     return (
-        <div className={[style.accordion, isActive ? style.active : null].join(' ')}>
+        <div className={[style.accordion, isActive ? style.active : null].join(' ')} aria-selected={isActive}>
             <div className={style.header}>
                 <span className={style.title}>{data.title}</span>
 
-                <button onClick={handleClickToggle} className={style.btn}>
+                <button onClick={handleClickToggle} className={style.btn} >
                     <IconAngle className={style.icon}/>
                 </button>
             </div>
@@ -42,13 +42,17 @@ export function Accordion({ data }: { data: TypeAccordion }) {
                 ref={contentRef}
                 className={style.content}
                 style={{ height: isActive ? heightContent : "0px" }}
+                aria-hidden={!isActive}
             >
                 {
                     Array.isArray(data.description) ? (
-                        <ul className={style.list}>
+                        <ul className={style.list} aria-hidden={!isActive}>
                             { data.description.map((item, i) => <li key={i} className={style.item}>{item}</li>) }
                         </ul>
-                    ) : <p className={style.description}>{data.description}</p>
+                    ) : <p
+                            aria-hidden={!isActive} 
+                            className={style.description}>{data.description}
+                        </p>
                 }
             </div>
         </div>

@@ -40,11 +40,11 @@ export default function Housing() {
                                 <Rating rating={Number(data.rating)} />
                             </div>
 
-                            <div className={style.container_accordion}>
+                            <section className={style.container_accordion}>
                                 <Accordion data={{ title: "Description", description: data.description }} />
 
                                 <Accordion data={{ title: "Équipements", description: data.equipments }} />
-                            </div>
+                            </section>
                         </section>
                     </>
                 )}
