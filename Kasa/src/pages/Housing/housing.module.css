@@ -3,7 +3,7 @@
     margin-top: 2.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    gap: 2.5rem;
 }
 .rating {
     display: flex;
@@ -54,11 +54,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-
-    margin-block: 2rem;
 }
 
 .container_accordion {
+    margin-top: 2.5rem;
     display: flex;
     gap: 5rem;
 }

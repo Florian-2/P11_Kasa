@@ -5,12 +5,16 @@ import style from './list-card.module.css';
 
 export function CardListHousing({ listHousing }: { listHousing: Housing[] }) {
     return (
-        <div className={style.container_card}>
-            {
-                listHousing.map((housing) => (
-                    <HousingCard key={housing.id} housing={housing}/>
-                )) 
-            }
-        </div>
+        <section>
+            <ul className={style.card_list}>
+                {
+                    listHousing.map((housing) => (
+                        <li key={housing.id}>
+                            <HousingCard  housing={housing}/>
+                        </li>
+                    ))
+                }
+            </ul>
+        </section>
     );
 }
