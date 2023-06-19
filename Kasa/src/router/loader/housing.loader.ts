@@ -23,7 +23,7 @@ export async function getOneHousingByIdLoader({ params }: LoaderFunctionArgs) {
     }
 
     const data: Housing[] = await res.json();
-    const housing = data.filter((h) => h.id === params.id)[0];
+    const housing = data.find((h) => h.id === params.id);
 
     if (!housing) {
         return redirect("*");
