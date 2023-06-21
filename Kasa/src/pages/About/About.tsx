@@ -9,7 +9,7 @@ import style from './about.module.css';
 export default function About() {
     return (
         <>
-            <Banner img={bannerImg} />
+            <Banner img={bannerImg} alt='Montagne'/>
 
             <section className={style.accordion}>
                 {aboutData.map((item) => <Accordion key={item.id} data={item}/>)}

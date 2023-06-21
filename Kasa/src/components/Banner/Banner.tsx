@@ -1,10 +1,10 @@
 import style from './banner.module.css';
 
 
-export function Banner({ title, img }: { title?: string, img: string }) {
+export function Banner({ title, img, alt }: { title?: string, img: string, alt?: string }) {
     return (
         <div className={style.banner}>
-            <img className={style.banner_img} src={img} alt="eau rocheuse" />
+            <img className={style.banner_img} src={img} alt={alt} />
 
             {
                 title && (

@@ -14,7 +14,7 @@ export default function Home() {
 
     return (
         <div className={style.container}>
-            <Banner title="Chez vous, partout et ailleurs" img={bannerImg}/>
+            <Banner title="Chez vous, partout et ailleurs" img={bannerImg} alt="Eau rocheuse"/>
 
             <Suspense fallback={<Loading/>}>
                 <Await resolve={housing}>
