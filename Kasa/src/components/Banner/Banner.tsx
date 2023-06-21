@@ -4,7 +4,7 @@ import style from './banner.module.css';
 export function Banner({ title, img, alt }: { title?: string, img: string, alt?: string }) {
     return (
         <div className={style.banner}>
-            <img className={style.banner_img} src={img} alt={alt} />
+            <img className={style.banner_img} src={img} alt={alt ? alt : ""} />
 
             {
                 title && (
