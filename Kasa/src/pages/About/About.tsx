@@ -12,7 +12,7 @@ export default function About() {
             <Banner img={bannerImg} alt='Montagne'/>
 
             <section className={style.accordion}>
-                {aboutData.map((item) => <Accordion key={item.id} data={item}/>)}
+                {aboutData.map((item, i) => <Accordion key={i} data={item}/>)}
             </section>
         </>
     );
