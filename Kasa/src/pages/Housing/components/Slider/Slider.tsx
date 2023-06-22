@@ -17,14 +17,13 @@ export function Slider({ title, images }: { title: string, images: string[] }) {
 
     function nextSlide() {
         if (slideIndex !== images.length) {
-            setSlideIndex(slideIndex + 1);
+            return setSlideIndex(slideIndex + 1);
         }
-        else if (slideIndex === images.length) {
-            setSlideIndex(1);
-        }
+
+        setSlideIndex(1);
     }
 
-    const goTo = (index: number) => setSlideIndex(index);
+    const goToImage = (index: number) => setSlideIndex(index);
 
     return (
         <div className={style.slider}>
@@ -49,7 +48,7 @@ export function Slider({ title, images }: { title: string, images: string[] }) {
                                 images.map((_, i) => (
                                     <button
                                         key={i}
-                                        onClick={() => goTo(i + 1)}
+                                        onClick={() => goToImage(i + 1)}
                                         className={[style.dot, slideIndex === (i + 1) ? style.dot_active : ""].join(' ')}
                                     ></button>
                                 ))
